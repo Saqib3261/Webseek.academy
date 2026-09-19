@@ -1,0 +1,872 @@
+/* =====================================================
+   WEBSEEK ACADEMY
+   BBA BCU - 1ST SEMESTER
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #f7f8fc;
+    color: #171a2b;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.bba-container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.bba-navbar {
+    background: #0b1024;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-inner {
+    width: min(1200px, 92%);
+    min-height: 78px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.bba-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 18px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.brand-logo {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #7357ff;
+    color: #ffffff;
+
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.bba-nav {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.bba-nav a {
+    color: #e7e8f2;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.bba-nav a:hover {
+    color: #a99cff;
+}
+
+.bba-register-btn {
+    background: #7357ff !important;
+    color: #ffffff !important;
+
+    padding: 11px 20px;
+    border-radius: 10px;
+}
+
+.bba-register-btn:hover {
+    background: #6045e6 !important;
+}
+
+.bba-menu-btn {
+    display: none;
+
+    border: none;
+    background: transparent;
+    color: #ffffff;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.bba-hero {
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(115, 87, 255, 0.25),
+            transparent 35%
+        ),
+        #0b1024;
+
+    color: #ffffff;
+    padding: 95px 20px 100px;
+}
+
+.hero-content {
+    width: min(900px, 92%);
+    margin: auto;
+    text-align: center;
+}
+
+.hero-label {
+    display: inline-block;
+
+    padding: 8px 16px;
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    color: #c9c1ff;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.bba-hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 7vw, 72px);
+    line-height: 1.08;
+
+    margin-bottom: 25px;
+}
+
+.bba-hero h1 span {
+    display: block;
+    color: #9c89ff;
+}
+
+.bba-hero p {
+    max-width: 700px;
+    margin: auto;
+
+    color: #c8cad7;
+    font-size: 17px;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 20px;
+    margin: 45px 0 35px;
+}
+
+.hero-stat {
+    min-width: 160px;
+
+    padding: 20px 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.hero-stat strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.hero-stat span {
+    color: #aaaec0;
+    font-size: 13px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border-radius: 10px;
+
+    background: #7357ff;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-2px);
+    background: #6045e6;
+}
+
+
+/* =====================================================
+   LIBRARY
+===================================================== */
+
+.bba-library {
+    padding: 90px 0;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-label {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #7357ff;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+    margin-bottom: 10px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(30px, 5vw, 44px);
+    line-height: 1.2;
+}
+
+.section-heading p {
+    color: #686d7d;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-area {
+    margin-bottom: 30px;
+}
+
+.search-box {
+    position: relative;
+
+    max-width: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e3eb;
+    border-radius: 14px;
+
+    box-shadow: 0 8px 25px rgba(11, 16, 36, 0.06);
+}
+
+.search-icon {
+    padding-left: 18px;
+
+    color: #7357ff;
+    font-size: 24px;
+}
+
+.search-box input {
+    width: 100%;
+
+    padding: 17px 50px 17px 12px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #171a2b;
+    font-size: 15px;
+}
+
+.clear-search {
+    position: absolute;
+    right: 12px;
+
+    width: 32px;
+    height: 32px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #eef0f7;
+    color: #555b6d;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.result-count {
+    margin-top: 12px;
+
+    color: #777d8f;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   LESSON GRID
+===================================================== */
+
+.lesson-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 28px;
+}
+
+.lesson-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e6e8ef;
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(11, 16, 36, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.lesson-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(11, 16, 36, 0.12);
+}
+
+
+/* =====================================================
+   THUMBNAIL
+===================================================== */
+
+.thumbnail-wrapper {
+    position: relative;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: #0b1024;
+}
+
+.lesson-thumbnail {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.lesson-card:hover .lesson-thumbnail {
+    transform: scale(1.04);
+}
+
+.lesson-number {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #7357ff;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.play-button {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 58px;
+    height: 58px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #7357ff;
+    color: #ffffff;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s ease;
+}
+
+.play-button:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+
+/* =====================================================
+   LESSON CONTENT
+===================================================== */
+
+.lesson-content {
+    padding: 23px;
+}
+
+.lesson-label {
+    color: #7357ff;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.lesson-title {
+    min-height: 58px;
+
+    margin: 10px 0 20px;
+
+    color: #171a2b;
+
+    font-size: 19px;
+    line-height: 1.35;
+}
+
+.watch-button {
+    width: 100%;
+
+    padding: 12px 18px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #0b1024;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.watch-button:hover {
+    background: #7357ff;
+}
+
+
+/* =====================================================
+   NO RESULTS
+===================================================== */
+
+.no-results {
+    display: none;
+
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+.no-results h3 {
+    margin-bottom: 8px;
+
+    font-size: 24px;
+}
+
+.no-results p {
+    color: #777d8f;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.bba-cta {
+    padding: 20px 0 90px;
+}
+
+.cta-box {
+    padding: 65px 30px;
+
+    border-radius: 25px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(115, 87, 255, 0.3),
+            transparent 35%
+        ),
+        #0b1024;
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+.cta-box span {
+    color: #a99cff;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.cta-box h2 {
+    margin: 15px 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(30px, 5vw, 45px);
+}
+
+.cta-box p {
+    max-width: 600px;
+
+    margin: 0 auto 25px;
+
+    color: #c6c9d6;
+}
+
+.cta-button {
+    display: inline-block;
+
+    padding: 14px 23px;
+
+    border-radius: 10px;
+
+    background: #7357ff;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #6045e6;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.bba-footer {
+    background: #0b1024;
+    color: #ffffff;
+}
+
+.footer-inner {
+    width: min(1180px, 92%);
+
+    margin: auto;
+    padding: 55px 0 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 40px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.footer-logo {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #7357ff;
+    color: #ffffff;
+
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.footer-brand h3 {
+    margin-bottom: 3px;
+
+    font-size: 17px;
+}
+
+.footer-brand p {
+    color: #969bad;
+
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    gap: 22px;
+}
+
+.footer-links a {
+    color: #c4c7d4;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #a99cff;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    padding: 22px 20px;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #8d92a5;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .lesson-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .bba-nav {
+        gap: 15px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .navbar-inner {
+        min-height: 70px;
+    }
+
+    .bba-brand {
+        font-size: 16px;
+    }
+
+    .bba-nav {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+        right: 0;
+
+        padding: 20px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        background: #0b1024;
+
+        box-shadow:
+            0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .bba-nav.active {
+        display: flex;
+    }
+
+    .bba-nav a {
+        padding: 10px 5px;
+    }
+
+    .bba-register-btn {
+        text-align: center;
+    }
+
+    .bba-menu-btn {
+        display: block;
+    }
+
+
+    .bba-hero {
+        padding: 70px 20px 75px;
+    }
+
+    .bba-hero p {
+        font-size: 15px;
+    }
+
+    .hero-stats {
+        gap: 10px;
+    }
+
+    .hero-stat {
+        min-width: 135px;
+        padding: 15px;
+    }
+
+    .hero-stat strong {
+        font-size: 23px;
+    }
+
+
+    .bba-library {
+        padding: 65px 0;
+    }
+
+
+    .lesson-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+
+    .lesson-title {
+        min-height: auto;
+    }
+
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        justify-content: flex-start;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .brand-logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .bba-brand {
+        font-size: 14px;
+    }
+
+    .bba-hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-stat {
+        width: 100%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+}
