@@ -1,0 +1,1033 @@
+/* =========================================================
+   WEBSEEK ACADEMY - TEXTBOOK LIBRARY
+   ========================================================= */
+
+
+/* ================= ROOT ================= */
+
+:root {
+    --navy: #0b1024;
+    --purple: #7357ff;
+    --purple-light: #9b84ff;
+
+    --light: #f6f6fb;
+    --white: #ffffff;
+
+    --text: #15182a;
+    --muted: #6b7288;
+
+    --line: #e6e7ee;
+
+    --green: #198754;
+    --blue: #3867ff;
+}
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    height: 76px;
+    background: var(--navy);
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 7%;
+    gap: 28px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+
+/* BRAND */
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    font-weight: 600;
+
+    margin-right: auto;
+}
+
+.brand b {
+    font-weight: 800;
+}
+
+
+/* LOGO */
+
+.logo-mark {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 11px;
+
+    background: linear-gradient(
+        135deg,
+        #7357ff,
+        #a993ff
+    );
+
+    display: grid;
+    place-items: center;
+
+    color: white;
+
+    font-weight: 800;
+
+    flex-shrink: 0;
+}
+
+
+/* NAV LINKS */
+
+.navbar nav {
+    display: flex;
+
+    gap: 25px;
+
+    color: #c6cada;
+
+    font-size: 14px;
+}
+
+.navbar nav a {
+    transition: 0.2s ease;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: white;
+}
+
+
+/* START LEARNING BUTTON */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.nav-btn {
+    background: var(--purple);
+    color: white;
+}
+
+.nav-btn:hover {
+    background: #6045ef;
+    transform: translateY(-1px);
+}
+
+
+/* MOBILE MENU */
+
+.menu {
+    display: none;
+
+    background: none;
+    border: 0;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.page-hero {
+    background: var(--navy);
+
+    color: white;
+
+    padding: 100px 7%;
+
+    text-align: center;
+}
+
+.eyebrow {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: 800;
+
+    color: #9d8cff;
+
+    margin-bottom: 14px;
+}
+
+.page-hero h1 {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(45px, 6vw, 70px);
+
+    line-height: 1.05;
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.page-hero h1 span {
+    color: #9b84ff;
+}
+
+.page-hero > p:last-child {
+    max-width: 650px;
+
+    margin: 25px auto 0;
+
+    color: #b9bfd1;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   SEARCH & FILTER AREA
+   ========================================================= */
+
+.library-tools {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 45px 5% 20px;
+}
+
+
+/* SEARCH */
+
+.search-box {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    background: white;
+
+    border: 1px solid var(--line);
+
+    border-radius: 14px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 18px;
+
+    box-shadow: 0 8px 25px rgba(11, 16, 36, 0.06);
+}
+
+.search-box > i {
+    color: var(--purple);
+
+    font-size: 17px;
+
+    margin-right: 12px;
+}
+
+.search-box input {
+    flex: 1;
+
+    border: 0;
+    outline: 0;
+
+    font-size: 14px;
+
+    color: var(--text);
+
+    background: transparent;
+}
+
+.search-box input::placeholder {
+    color: #9aa0b2;
+}
+
+#clearSearch {
+    width: 32px;
+    height: 32px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: #f0efff;
+
+    color: var(--purple);
+
+    cursor: pointer;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* FILTERS */
+
+.filters {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.filter-btn {
+    border: 1px solid var(--line);
+
+    background: white;
+
+    color: var(--muted);
+
+    padding: 9px 20px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--purple);
+
+    color: var(--purple);
+}
+
+.filter-btn.active {
+    background: var(--purple);
+
+    border-color: var(--purple);
+
+    color: white;
+}
+
+
+/* RESULT MESSAGE */
+
+.result-message {
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-top: 18px;
+}
+
+
+/* =========================================================
+   MAIN LIBRARY
+   ========================================================= */
+
+.library-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 20px 5% 80px;
+}
+
+
+/* SECTION */
+
+.textbook-section {
+    margin-top: 60px;
+}
+
+
+/* SECTION HEADING */
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-label {
+    display: inline-block;
+
+    color: var(--purple);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: 800;
+
+    margin-bottom: 7px;
+}
+
+.section-heading h2 {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 36px;
+
+    line-height: 1.2;
+
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   UNIVERSITY BLOCK
+   ========================================================= */
+
+.university-block {
+    margin-top: 40px;
+}
+
+.university-section {
+    padding-top: 20px;
+}
+
+
+/* =========================================================
+   SEMESTER
+   ========================================================= */
+
+.semester-group {
+    margin-top: 45px;
+}
+
+.semester-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+}
+
+.semester-title span {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    background: var(--navy);
+
+    color: white;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+.semester-title h3 {
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CARD GRID
+   ========================================================= */
+
+.card-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   TEXTBOOK CARD
+   ========================================================= */
+
+.textbook-card {
+    background: white;
+
+    border: 1px solid var(--line);
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 340px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.textbook-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #d8d3ff;
+
+    box-shadow:
+        0 15px 35px rgba(11, 16, 36, 0.09);
+}
+
+
+/* =========================================================
+   COURSE ICONS
+   ========================================================= */
+
+.card-icon {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 16px;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 23px;
+
+    margin-bottom: 20px;
+}
+
+
+/* SSLC */
+
+.school-icon {
+    background: #eeeaff;
+
+    color: #7357ff;
+}
+
+
+/* PUC */
+
+.puc-icon {
+    background: #e8f0ff;
+
+    color: #3867ff;
+}
+
+
+/* BCA */
+
+.bca-icon {
+    background: #e8f7ff;
+
+    color: #087ea4;
+}
+
+
+/* BBA */
+
+.bba-icon {
+    background: #fff0e7;
+
+    color: #e87524;
+}
+
+
+/* BCOM */
+
+.bcom-icon {
+    background: #eaf8ef;
+
+    color: #198754;
+}
+
+
+/* BSC */
+
+.bsc-icon {
+    background: #f4ebff;
+
+    color: #8a3ffc;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.card-tag {
+    display: inline-block;
+
+    color: var(--purple);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
+}
+
+.textbook-card h3 {
+    font-size: 18px;
+
+    line-height: 1.3;
+
+    margin-bottom: 9px;
+}
+
+.textbook-card > p {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   DOWNLOAD BUTTONS
+   ONLY TWO BUTTONS
+   ========================================================= */
+
+.card-buttons {
+    margin-top: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+}
+
+.download-btn {
+    min-height: 42px;
+
+    border-radius: 9px;
+
+    padding: 8px 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    transition: 0.2s ease;
+}
+
+
+/* TEXTBOOK BUTTON */
+
+.textbook-btn {
+    background: var(--navy);
+
+    color: white;
+}
+
+.textbook-btn:hover {
+    background: var(--purple);
+
+    transform: translateY(-2px);
+}
+
+
+/* NOTES BUTTON */
+
+.notes-btn {
+    background: #f0efff;
+
+    color: var(--purple);
+
+    border: 1px solid #ddd8ff;
+}
+
+.notes-btn:hover {
+    background: var(--purple);
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   NO RESULTS
+   ========================================================= */
+
+.no-results {
+    display: none;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+.no-results-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    background: #eeeaff;
+
+    color: var(--purple);
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 22px;
+}
+
+.no-results h2 {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.no-results p {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.reset-btn {
+    border: 0;
+
+    background: var(--purple);
+
+    color: white;
+
+    padding: 11px 22px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    background: #6045ef;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background: var(--navy);
+
+    color: white;
+
+    padding: 50px 7% 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 30px;
+}
+
+footer p {
+    color: #9ea6be;
+
+    font-size: 13px;
+
+    margin-top: 10px;
+
+    max-width: 430px;
+}
+
+.footer-brand {
+    margin-right: 0;
+}
+
+
+/* FOOTER LINKS */
+
+.footer-links {
+    display: flex;
+
+    gap: 22px;
+
+    color: #b7bdd0;
+
+    font-size: 13px;
+
+    align-items: center;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+
+/* COPYRIGHT */
+
+footer > small {
+    grid-column: 1 / -1;
+
+    border-top: 1px solid #29304c;
+
+    padding-top: 20px;
+
+    color: #7e879f;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE NAV
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar nav {
+        display: none;
+
+        position: absolute;
+
+        top: 76px;
+
+        left: 0;
+        right: 0;
+
+        background: var(--navy);
+
+        padding: 20px 5%;
+
+        flex-direction: column;
+
+        gap: 18px;
+
+        border-top: 1px solid #252b45;
+    }
+
+    .navbar nav.open {
+        display: flex;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+
+    .page-hero {
+        padding: 75px 5%;
+    }
+
+
+    .library-tools {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .page-hero h1 {
+        font-size: 45px;
+    }
+
+    .page-hero > p:last-child {
+        font-size: 14px;
+    }
+
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .textbook-card {
+        min-height: auto;
+    }
+
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+
+    .semester-title h3 {
+        font-size: 18px;
+    }
+
+
+    .card-buttons {
+        grid-template-columns: 1fr;
+    }
+
+
+    .download-btn {
+        min-height: 44px;
+
+        font-size: 12px;
+    }
+
+
+    footer {
+        display: flex;
+
+        flex-direction: column;
+
+        padding: 40px 5% 25px;
+    }
+
+
+    .footer-links {
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+
+    .brand {
+        font-size: 15px;
+    }
+
+
+    .logo-mark {
+        width: 32px;
+        height: 32px;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .page-hero h1 {
+        font-size: 38px;
+    }
+
+    .filters {
+        gap: 7px;
+    }
+
+    .filter-btn {
+        padding: 8px 15px;
+    }
+
+}

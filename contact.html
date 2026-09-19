@@ -1,0 +1,288 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Contact | WebSeek Academy</title><meta
+name="description"
+content="Contact WebSeek Academy for questions, suggestions and feedback."
+
+«»
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >  <link rel="stylesheet" href="style.css">
+</head><body>  <!-- NAVBAR -->  <header class="navbar"><a class="brand" href="index.html">
+
+  <span class="logo-mark">W</span>
+
+  WebSeek <b>Academy</b>
+
+</a>
+
+<nav id="nav">
+
+  <a href="index.html">Home</a>
+
+  <a href="course.html">Courses</a>
+
+  <a href="textbook.html">Textbooks & Notes</a>
+
+
+  <a href="about.html">About</a>
+
+  <a href="contact.html">Contact</a>
+
+</nav>
+
+<a class="btn nav-btn" href="https://forms.gle/DsPG3nHi7dz6tWBp7">
+  Register
+</a>
+
+<button class="menu" id="menu">
+  ☰
+</button>
+
+  </header>  <!-- CONTACT HERO -->  <section class="page-hero"><p class="eyebrow">
+  GET IN TOUCH
+</p>
+
+<h1>
+  We'd love to
+  <span>hear from you.</span>
+</h1>
+
+<p>
+  Have a question, suggestion or feedback?
+  Send us a message and we'll be happy to hear from you.
+</p>
+
+  </section>  <!-- CONTACT SECTION -->  <section class="section contact-section"><div class="contact-info">
+
+  <p class="eyebrow">
+    CONTACT WEBSEEK ACADEMY
+  </p>
+
+  <h2>
+    Let's connect.
+  </h2>
+
+  <p>
+    Whether you have a question about a lesson,
+    want to suggest a topic or simply want to
+    share your feedback, feel free to contact us.
+  </p>
+
+
+  <div class="contact-details">
+
+    <div>
+
+      <span class="contact-icon">
+        @
+      </span>
+
+      <div>
+
+        <small>
+          EMAIL
+        </small>
+
+        <strong>
+          webseek.academy@gmail.com
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <div>
+
+      <span class="contact-icon">
+        ▶
+      </span>
+
+      <div>
+
+        <small>
+          YOUTUBE
+        </small>
+
+        <strong>
+          WebSeek Academy
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <div>
+
+      <span class="contact-icon">
+        ?
+      </span>
+
+      <div>
+
+        <small>
+          SUPPORT
+        </small>
+
+        <strong>
+          Student Questions & Feedback
+        </strong>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- WORKING CONTACT FORM -->
+
+<div class="contact-form">
+
+  <p class="eyebrow">
+    SEND A MESSAGE
+  </p>
+
+  <form
+    action="https://formspree.io/f/xgaezqlj"
+    method="POST"
+  >
+
+    <label for="name">
+      Your Name
+    </label>
+
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Enter your name"
+      required
+    >
+
+
+    <label for="email">
+      Email Address
+    </label>
+
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Enter your email"
+      required
+    >
+
+
+    <label for="subject">
+      Subject
+    </label>
+
+    <input
+      type="text"
+      id="subject"
+      name="subject"
+      placeholder="What would you like to ask?"
+      required
+    >
+
+
+    <label for="message">
+      Message
+    </label>
+
+    <textarea
+      id="message"
+      name="message"
+      rows="6"
+      placeholder="Write your message..."
+      required
+    ></textarea>
+
+
+    <button
+      type="submit"
+      class="btn primary full"
+    >
+      Send Message
+    </button>
+
+  </form>
+
+</div>
+
+  </section>  <!-- FOOTER -->  <footer><div>
+
+  <a class="brand" href="index.html">
+
+    <span class="logo-mark">
+      W
+    </span>
+
+    WebSeek <b>Academy</b>
+
+  </a>
+
+  <p>
+    Learn smarter.
+    Understand better.
+    Achieve more.
+  </p>
+
+</div>
+
+
+<div class="footer-links">
+
+  <a href="index.html#courses">
+    Courses
+  </a>
+
+  <a href="textbook.html">
+    Textbooks & Notes
+  </a>
+
+  
+
+  <a href="about.html">
+    About
+  </a>
+
+  <a href="contact.html">
+    Contact
+  </a>
+
+</div>
+
+
+<small>
+     © 2026 WebSeek.Academy | Asha Group of Institutions | Founded & Developed by Syed Saqib Pasha
+</small>
+
+  </footer>  <!-- MOBILE MENU ONLY -->  <script>
+
+    const menuButton = document.getElementById("menu");
+    const navigation = document.getElementById("nav");
+
+    menuButton.onclick = () => {
+      navigation.classList.toggle("open");
+    };
+
+    document.querySelectorAll("#nav a").forEach((link) => {
+
+      link.onclick = () => {
+        navigation.classList.remove("open");
+      };
+
+    });
+
+  </script></body>
+</html>
